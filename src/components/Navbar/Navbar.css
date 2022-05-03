@@ -5,6 +5,7 @@
   align-items: center;
   grid-template-columns: 1fr 1fr 2fr;
   width: 100%;
+  z-index: 500;
 }
 
 .navbar ul {
@@ -15,6 +16,7 @@
 .navbar h2 {
   margin-left: 60px;
   color: black;
+  opacity: 0;
   font-size: 40px;
 }
 
@@ -25,12 +27,11 @@
 
 .navbar ul:first-of-type a {
   text-decoration: none;
-  color: gray;
+  color: black;
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
   color: black;
   box-shadow: inset 0 0 0 0 #1dd3b0;
-  color: gray;
   padding: 0 .25rem;
   margin: 0 -.25rem;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -56,8 +57,9 @@
   color: black;
 }
 
-/* #socials {
-  justify-content: flex-end;
-  margin-right: 20px;
-} */
+@media screen and (max-width: 640px){
+  .navbar {
+    display: none;
+  }
+}
 

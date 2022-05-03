@@ -11,12 +11,10 @@ class Footer extends Component {
       <div className='footer'>
         <ul>
           <li><a href='/'>Home</a></li>
-          <li><a href='/about'>About</a></li>
-          <li><a href='/service'>Service</a></li>
-          <li><a href='/portfolio'>Portfolio</a></li>
-          <li><a href='/resume'>Resume</a></li>
-          <li><a href='/blog'>Blog</a></li>
-          <li><a href='/contact'>Contact</a></li>
+          <li><a href='#about'>About</a></li>
+          <li><a href='#projects'>Projects</a></li>
+          <li><a href='#resume'>Resume</a></li>
+          <li><a href='#contact'>Contact</a></li>
         </ul>
         <ul id='footer-socials'>
           <li><a href='https://www.instagram.com/viktor.vanhulle/'><IoLogoInstagram/></a></li>

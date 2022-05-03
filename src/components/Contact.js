@@ -31,10 +31,10 @@ export const Contact = () => {
   return (
     <form ref={form} onSubmit={sendEmail} id='myform'>
       <p id='message'>Uw bericht is succesvol verzonden!</p>
-      <input id='formName' type="text" name="name" placeholder='Naam' required/>
+      <input id='formName' type="text" name="name" placeholder='Name' required/>
       <input id='formMail' type="email" name="email" placeholder='Email' required/>
-      <textarea id='subject' name="subject" placeholder='Bericht'/>
-      <input type="submit" value="Verzenden"  id='submit'/>
+      <textarea id='subject' name="subject" placeholder='Subject'/>
+      <input type="submit" value="Send"  id='submit'/>
     </form>
   );
 };

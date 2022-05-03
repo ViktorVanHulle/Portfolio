@@ -1,3 +1,5 @@
+
+
 /* HOME */
 section {
   min-height: 90vh;
@@ -11,9 +13,9 @@ button,
 
 /* intro */
 .intro {
-  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite; */
+  animation: gradient 15s ease infinite;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +24,7 @@ button,
 }
 
 /* colourful background */
-/* @keyframes gradient {
+@keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -32,7 +34,12 @@ button,
   100% {
     background-position: 0% 50%;
   }
-} */
+}
+
+.intro div {
+  position: absolute;
+  z-index: 50;
+}
 
 .intro h1 {
   font-size: 60px;
@@ -52,6 +59,86 @@ button,
   text-decoration: underline;
 }
 
+/* about */
+.about-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-section img {
+  position: relative;
+  top: -100px;
+  width: 400px;
+}
+
+.about-section h1 {
+  position: relative;
+  left: -100px;
+  font-size: 80px;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+.about-section p {
+  position: relative;
+  right: -50px;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgb(70, 70, 70);
+  width: 400px;
+  text-align: justify;
+}
+
+.about-section a {
+  font-weight: 600;
+  color: black;
+}
+
+.about-section a:hover {
+  color: #1dd3b0;
+  transition: all 300ms ease;
+}
+
+/* Resume */
+#resume {
+  background-color: black;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#resume a:hover {
+  background-color: #1dd3b0;
+  color: white;
+  transition: all 300ms ease;
+}
+
+#resume a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: white;
+  width: 200px;
+}
+
+#resume p {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+
 /* projects */
 .projects-section {
   display: grid;
@@ -67,50 +154,50 @@ button,
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 50px;
   align-items: center;
   padding: 20px;
 }
 
-.projects div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .projects img {
-  /* test width */
   width: 100%;
   height: 100%;
 }
 
 .projects button {
   padding: 10px;
-  background-color: white;
+  background-color: black;
   border: transparent;
-  width: 140px;
   border-radius: 20px;
+  margin-top: 15px;
 }
 
 .projects a {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12px;
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: white;
+  padding: 10px;
 }
 
 .projects p {
   font-style: italic;
 }
 
-.speakingPerson {
+.stars { 
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  /* background-color: #ececec; */
-  margin: 20px;
+  gap: 10px;
+  width: 100%;
+}
+
+.stars svg {
+  width: 10px;
+  text-align: left;
+  color: #EEBC1D;
 }
 
 /* flip-card */
@@ -119,7 +206,7 @@ button,
   width: 300px;
   height: 200px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  border: 2px dashed #ececec;
+  /* border: 2px dashed #ececec; */
 }
 
 /* This container is needed to position the front and back side */
@@ -145,22 +232,28 @@ button,
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-  /* box-shadow: 0 0 10px 1px rgb(206, 200, 200); */
+  /* box-shadow: 0 0 10px 1px black; */
+  padding: 10px;
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
   color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-  /* background-color: #FF5F1F; */
-  background-color: black;
-  color: white;
   transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
+.flip-card-back p {
+  margin: 0;
+}
+
 /* ======================================== */
 /* skillset */
 .skillset {
@@ -169,7 +262,14 @@ button,
   justify-content: center;
   align-items: center;
   background-color: black;
-  height: 60vh;
+  height: 80vh;
+}
+
+.skillset h1 {
+  color: white;
+  font-size: 60px;
+  margin-top: 0;
+  letter-spacing: 6px;
 }
 
 .skillset p {
@@ -217,6 +317,10 @@ button,
   align-items: center;
 }
 
+.contact-section div {
+  height: 100%;
+}
+
 .contact-wrapper {
   display: flex;
   flex-direction: column;
@@ -247,6 +351,7 @@ textarea {
 
 textarea {
   height: 80px;
+  resize: none;
 }
 
 #message {
@@ -254,23 +359,126 @@ textarea {
 }
 
 #submit {
-  border: none;
+  border: 2px solid transparent;
   background-color: black;
   color: white;
   padding: 10px;
   border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  font-size: 16px;
+}
+#submit:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  transition: all 500ms ease;
 }
 
-/* DELETE THIS */
-.test {
+/* THREE */
+
+/* .speakingPerson {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+} */
+
+canvas {
+  height: 100%;
   width: 100%;
 }
+
+
+/* DELETE THIS */
+/* .test {
+  width: 100%;
+} */
 
 @media screen and (max-width: 900px) {
 }
 @media screen and (max-width: 640px) {
+
+  .intro {
+    text-align: center;
+  }
+
+  .intro h1 {
+    font-size: 30px;
+    line-height: 80px;
+  }
+
+  .intro canvas {
+    opacity: 0;
+  }
+
+  .intro h3 {
+    opacity: 0;
+  }
+
   .contact-section {
     grid-template-columns: 1fr;
+    height: 120vh;
+  }
+
+  .contact-wrapper {
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .contact-wrapper h1 {
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .about-section img {
+    margin-top: 20px;
+    top: 0;
+    width: 300px;
+  }
+
+  .about-section  {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .about-section div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-section p {
+    right: 0;
+    font-size: 16px;
+    width: 80%;
+  }
+
+  .about-section h1 {
+    left: 0;
+    font-size: 50px;
+    text-align: center;
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .projects-section {
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-wrapper {
+    justify-content: center;
+  }
+
+  .skillset {
+    padding-bottom: 50px;
   }
 }
 @media screen and (max-width: 400px) {

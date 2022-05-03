@@ -29,3 +29,19 @@
   background-color: white;
   color: black;
 }
+
+@media screen and (max-width: 640px){
+  .footer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .footer ul {
+    padding-left: 0;
+  }
+
+  .footer a {
+    margin-right: 0;
+    padding: 10px;
+  }
+}
