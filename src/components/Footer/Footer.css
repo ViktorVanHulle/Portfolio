@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  height: 10vh;
+}
+
+.footer ul {
+  list-style: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+}
+
+#footer-socials svg {
+  padding: 10px;
+  background-color: rgb(37, 36, 36);
+  font-size: 25px;
+}
+
+#footer-socials svg:hover {
+  background-color: white;
+  color: black;
+}

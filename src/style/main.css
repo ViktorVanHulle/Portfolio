@@ -1,0 +1,277 @@
+/* HOME */
+section {
+  min-height: 90vh;
+  width: 100%;
+}
+
+button,
+#submit {
+  cursor: pointer;
+}
+
+/* intro */
+.intro {
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+/* colourful background */
+/* @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+.intro h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.intro h3 {
+  font-size: 24px;
+}
+
+.intro h1 span {
+  color: white;
+  background-color: black;
+  padding: 10px;
+}
+.intro h3 span {
+  text-decoration: underline;
+}
+
+/* projects */
+.projects-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+
+.projects-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.projects div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects img {
+  /* test width */
+  width: 100%;
+  height: 100%;
+}
+
+.projects button {
+  padding: 10px;
+  background-color: white;
+  border: transparent;
+  width: 140px;
+  border-radius: 20px;
+}
+
+.projects a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+.projects p {
+  font-style: italic;
+}
+
+.speakingPerson {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #ececec; */
+  margin: 20px;
+}
+
+/* flip-card */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  border: 2px dashed #ececec;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  /* box-shadow: 0 0 10px 1px rgb(206, 200, 200); */
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  /* background-color: #FF5F1F; */
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+/* ======================================== */
+/* skillset */
+.skillset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 60vh;
+}
+
+.skillset p {
+  color: white;
+}
+
+.skillset-innercontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 80%;
+}
+
+.skill {
+  background-color: #1dd3b0;
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+}
+
+.skill-container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skill.novice{
+  width: 30%;
+}
+.skill.intermidiate{
+  width: 60%;
+}
+.skill.proficient{
+  width: 80%;
+}
+.skill.expert{
+  width: 100%;
+}
+
+/* ======================================== */
+/* Contact */
+.contact-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-wrapper h1 {
+  position: relative;
+  top: -2rem;
+  left: -10rem;
+  font-size: 60px;
+  height: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 80%;
+}
+
+input,
+textarea {
+  border: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+}
+
+textarea {
+  height: 80px;
+}
+
+#message {
+  color: white;
+}
+
+#submit {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+/* DELETE THIS */
+.test {
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 640px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 400px) {
+}
