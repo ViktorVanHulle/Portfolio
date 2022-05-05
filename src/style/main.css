@@ -142,18 +142,18 @@ button,
 /* projects */
 .projects-section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 40% 60%;
   justify-content: center;
 }
 
 .projects-wrapper {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   align-items: center;
   padding: 20px;
@@ -397,10 +397,15 @@ canvas {
 
 @media screen and (max-width: 900px) {
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
+
+  canvas {
+    width: 100%;
+  }
 
   .intro {
     text-align: center;
+    height: 100vh;
   }
 
   .intro h1 {
@@ -413,7 +418,7 @@ canvas {
   }
 
   .intro h3 {
-    opacity: 0;
+    display: none;
   }
 
   .contact-section {

@@ -1,6 +1,8 @@
 import bmLogo from '../assets/projects/bmLogo.jpg'
 import pvhLogo from '../assets/projects/pvhLogo.png'
 import person from '../assets/projects/person.png'
+import cachinnoLogo from '../assets/projects/cachinnoLogo.png'
+import threeLogo from '../assets/projects/three-js-logo.png'
 
 const projects = [
   {
@@ -16,6 +18,20 @@ const projects = [
     review: "\"I still need to write a review\"",
     url: "https://photographyvanhulle.com",
     image: pvhLogo
+  },
+  {
+    title: "Cachinno games",
+    url: "",
+    stars: 0,
+    text:"I am currently following the Full Time Game Dev course from Thomas Brush",
+    image: cachinnoLogo 
+  },
+  {
+    title: "Three.js journey",
+    url: "",
+    stars: 0,
+    text:"I am currently following the Three.js journey course from Bruno Simon",
+    image: threeLogo
   },
 ]
 

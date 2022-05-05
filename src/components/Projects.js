@@ -18,7 +18,12 @@ export default function Projects() {
                   <Stars amount={item.stars}/>
                 </div>
                 <p>{item.review}</p>
-                <button><a href={item.url}>Visit website</a></button>
+                {
+                  item.url !== "" ?
+                  <button><a href={item.url}>Visit website</a></button>
+                  :
+                  <p>{item.text}</p>
+                }
               </div>
             </div>
           </div>

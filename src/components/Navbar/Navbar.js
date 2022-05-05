@@ -1,21 +1,54 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import './Navbar.css';
+import "./Navbar.css";
 
 class Navbar extends Component {
-  render(){
-    return(
-      <div className='navbar'>
-        <h2>Viktor.</h2>
-        <ul>
-          <li><a href='#about'>About</a></li>
-          <li><a href='#projects'>Projects</a></li>
-          <li><a href='#resume'>Resume</a></li>
-          <li><a href='#contact'>Contact</a></li>
+
+  state = { clicked: false }
+
+  handleClick = () => {
+    this.toggleIcon();
+    this.setState({clicked : !this.state.clicked})
+  }
+
+  toggleIcon(){
+    if ( document.getElementById('hamburger-icon').className !== 'open' ) {
+      document.getElementById('hamburger-icon').className += 'open';
+      // document.getElementById('logoImg').src = signature_color;
+    }
+    else {
+      document.getElementById('hamburger-icon').className = '';
+      // document.getElementById('logoImg').src = signature;
+    }
+  }
+
+  render() {
+    return (
+      <div className={this.state.clicked ? 'navbar active' : 'navbar'} id='navbar'>
+        <div id="hamburger-icon" onClick={this.handleClick}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <h2>VVH</h2>
+        <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#resume">Resume</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
-    )
+    );
   }
 }
 
-export default Navbar
+export default Navbar;
