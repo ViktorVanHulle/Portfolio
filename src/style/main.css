@@ -245,7 +245,6 @@ canvas {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-  padding: 10px;
 }
 
 .flip-card-front {

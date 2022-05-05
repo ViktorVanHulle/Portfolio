@@ -53,14 +53,14 @@ class App extends Component {
             <div>
               <h1>About me.</h1>
               <p>
-                Hey my name is Viktor Van Hulle. I am a 20 year old web
+                Hi, my name is Viktor Van Hulle. I am a 20 year old web
                 developer and student studying for a bachelor in Applied
                 Computer Science at HoGent. In my free time I like to make
                 websites. It's something I can fully immerse myself in.
-                Currently I only have had the privelege of building 2 websites
-                for other people. So if you are looking for someone to make you
-                a website that is both creative, immersive and something
-                worthwhile visiting you can always contact me on my social media
+                Currently I only have had the privilege of building 2 websites
+                for other people. So if you are looking for someone to make you a website
+                that is both creative, immersive and something
+                worthwhile visiting, you can always contact me on my social media
                 or through the <a href="#contact">Contact form</a> on this
                 website.
               </p>
