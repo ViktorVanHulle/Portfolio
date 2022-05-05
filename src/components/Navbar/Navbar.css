@@ -162,7 +162,6 @@
 /* RESPONSIVE */
 /*            */
 @media screen and (max-width: 900px) {
-
   .navbar h2 {
     display: none;
   }
@@ -219,18 +218,14 @@
   #hamburger-icon.open span {
     background: #051c23;
   }
-  
+
   .navbar ul:first-of-type a {
-    box-shadow: inset 0 0 0 0 #1dd3b0;
-    padding: 0 0.25rem;
-    margin: 0 -0.25rem;
-    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: none;
   }
-  
+
   .navbar ul:first-of-type a:hover {
-    color: #1dd3b0;
-    box-shadow: inset 200px 0 0 0 black;
-  }  
+    box-shadow: none;
+  }
 }
 
 @media screen and (max-width: 640px) {

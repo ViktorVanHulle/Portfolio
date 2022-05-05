@@ -1,8 +1,5 @@
-
-
-/* HOME */
+/* MAIN CSS */
 section {
-  min-height: 90vh;
   width: 100%;
 }
 
@@ -11,7 +8,18 @@ button,
   cursor: pointer;
 }
 
-/* intro */
+canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.brake {
+  display: none;
+}
+
+/*       */
+/* INTRO */
+/*       */
 .intro {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -23,7 +31,7 @@ button,
   text-transform: uppercase;
 }
 
-/* colourful background */
+/* colourful background keyframe */
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -59,12 +67,15 @@ button,
   text-decoration: underline;
 }
 
-/* about */
+/*       */
+/* ABOUT */
+/*       */
 .about-section {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 80px;
 }
 
 .about-section img {
@@ -102,14 +113,16 @@ button,
   transition: all 300ms ease;
 }
 
-/* Resume */
+/*        */
+/* RESUME */
+/*        */
 #resume {
   background-color: black;
-  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 80px 0;
 }
 
 #resume a:hover {
@@ -138,12 +151,14 @@ button,
   text-align: center;
 }
 
-
-/* projects */
+/*          */
+/* PROJECTS */
+/*          */
 .projects-section {
   display: grid;
   grid-template-columns: 40% 60%;
   justify-content: center;
+  margin: 100px 0;
 }
 
 .projects-wrapper {
@@ -161,7 +176,6 @@ button,
 
 .projects img {
   width: 100%;
-  height: 100%;
 }
 
 .projects button {
@@ -186,7 +200,8 @@ button,
   font-style: italic;
 }
 
-.stars { 
+/* STARS */
+.stars {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -197,19 +212,18 @@ button,
 .stars svg {
   width: 10px;
   text-align: left;
-  color: #EEBC1D;
+  color: #eebc1d;
 }
 
-/* flip-card */
+/* FLIP-CARD */
 .flip-card {
   background-color: transparent;
   width: 300px;
   height: 200px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  /* border: 2px dashed #ececec; */
+  padding-bottom: 50px;
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -219,7 +233,6 @@ button,
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -232,16 +245,13 @@ button,
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-  /* box-shadow: 0 0 10px 1px black; */
   padding: 10px;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
   color: black;
 }
 
-/* Style the back side */
 .flip-card-back {
   transform: rotateY(180deg);
   display: flex;
@@ -254,15 +264,17 @@ button,
   margin: 0;
 }
 
-/* ======================================== */
-/* skillset */
+/*        */
+/* SKILLS */
+/*        */
 .skillset {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: black;
-  height: 80vh;
+  height: fit-content;
+  padding: 100px 0;
 }
 
 .skillset h1 {
@@ -295,26 +307,28 @@ button,
   background-color: #ddd;
 }
 
-.skill.novice{
+.skill.novice {
   width: 30%;
 }
-.skill.intermidiate{
+.skill.intermidiate {
   width: 60%;
 }
-.skill.proficient{
+.skill.proficient {
   width: 80%;
 }
-.skill.expert{
+.skill.expert {
   width: 100%;
 }
 
-/* ======================================== */
-/* Contact */
+/*         */
+/* CONTACT */
+/*         */
 .contact-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
+  margin: 100px 0;
 }
 
 .contact-section div {
@@ -325,6 +339,7 @@ button,
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 }
 
 .contact-wrapper h1 {
@@ -335,11 +350,13 @@ button,
   height: 2px;
 }
 
+/* FORM */
 form {
   display: flex;
   flex-direction: column;
   gap: 30px;
   width: 80%;
+  height: fit-content;
 }
 
 input,
@@ -368,6 +385,7 @@ textarea {
   letter-spacing: 4px;
   font-size: 16px;
 }
+
 #submit:hover {
   background-color: white;
   color: black;
@@ -375,33 +393,12 @@ textarea {
   transition: all 500ms ease;
 }
 
-/* THREE */
-
-/* .speakingPerson {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-} */
-
-canvas {
-  height: 100%;
-  width: 100%;
-}
-
-
-/* DELETE THIS */
-/* .test {
-  width: 100%;
-} */
-
-
 @media screen and (max-width: 900px) {
-
   canvas {
     width: 100%;
   }
 
+  /* INTRO */
   .intro {
     text-align: center;
     height: 100vh;
@@ -420,30 +417,18 @@ canvas {
     display: none;
   }
 
-  .contact-section {
-    grid-template-columns: 1fr;
-    height: 120vh;
+  .brake {
+    display: inherit;
   }
 
-  .contact-wrapper {
-    align-items: center;
-    margin-bottom: 50px;
-  }
-
-  .contact-wrapper h1 {
-    top: 0;
-    left: 0;
-    font-size: 30px;
-    text-align: center;
-  }
-
+  /* ABOUT */
   .about-section img {
     margin-top: 20px;
     top: 0;
     width: 300px;
   }
 
-  .about-section  {
+  .about-section {
     flex-direction: column;
     height: 100%;
   }
@@ -469,6 +454,7 @@ canvas {
     margin-top: 10px;
   }
 
+  /* PROJECTS */
   .projects-section {
     grid-template-columns: 1fr;
   }
@@ -481,9 +467,40 @@ canvas {
     justify-content: center;
   }
 
+  /* SKILLS */
   .skillset {
     padding-bottom: 50px;
   }
+
+  /* CONTACT */
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-wrapper {
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .contact-wrapper h1 {
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    text-align: center;
+  }
 }
+
 @media screen and (max-width: 400px) {
+  /* INTRO */
+  .intro h1 {
+    font-size: 24px;
+  }
+  /* ABOUT */
+  .about-section img {
+    width: 200px;
+  }
+  /* PROJECTS */
+  .flip-card {
+    width: 200px;
+  }
 }

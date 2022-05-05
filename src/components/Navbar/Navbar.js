@@ -3,28 +3,27 @@ import React, { Component } from "react";
 import "./Navbar.css";
 
 class Navbar extends Component {
-
-  state = { clicked: false }
+  state = { clicked: false };
 
   handleClick = () => {
     this.toggleIcon();
-    this.setState({clicked : !this.state.clicked})
-  }
+    this.setState({ clicked: !this.state.clicked });
+  };
 
-  toggleIcon(){
-    if ( document.getElementById('hamburger-icon').className !== 'open' ) {
-      document.getElementById('hamburger-icon').className += 'open';
-      // document.getElementById('logoImg').src = signature_color;
-    }
-    else {
-      document.getElementById('hamburger-icon').className = '';
-      // document.getElementById('logoImg').src = signature;
+  toggleIcon() {
+    if (document.getElementById("hamburger-icon").className !== "open") {
+      document.getElementById("hamburger-icon").className += "open";
+    } else {
+      document.getElementById("hamburger-icon").className = "";
     }
   }
 
   render() {
     return (
-      <div className={this.state.clicked ? 'navbar active' : 'navbar'} id='navbar'>
+      <div
+        className={this.state.clicked ? "navbar active" : "navbar"}
+        id="navbar"
+      >
         <div id="hamburger-icon" onClick={this.handleClick}>
           <span></span>
           <span></span>
@@ -34,16 +33,24 @@ class Navbar extends Component {
         <h2>VVH</h2>
         <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
           <li>
-            <a href="#about">About</a>
+            <a href="#about" onClick={this.handleClick}>
+              About
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#projects" onClick={this.handleClick}>
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#resume">Resume</a>
+            <a href="#resume" onClick={this.handleClick}>
+              Resume
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact" onClick={this.handleClick}>
+              Contact
+            </a>
           </li>
         </ul>
       </div>

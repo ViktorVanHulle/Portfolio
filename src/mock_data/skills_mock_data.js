@@ -33,6 +33,6 @@ const skills = [
     title: "css",
     percentage: "expert",
   },
-]
+];
 
-export default skills
+export default skills;
