@@ -15,8 +15,8 @@ const projects = [
   {
     title: "Photography Van Hulle",
     stars: 5,
-    review: '"I still need to write a review"',
-    url: "https://photographyvanhulle.com",
+    review: '"Does whatever it takes to get the job done and done right"',
+    url: "https://lukasvanhulle.com",
     image: pvhLogo,
   },
   {
